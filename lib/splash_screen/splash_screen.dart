@@ -1,3 +1,4 @@
+import 'package:ev_charge/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -6,6 +7,15 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
+    // Delay for 2 seconds before navigating to LoginScreen
+    Future.delayed(const Duration(seconds: 2), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
+      );
+    });
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
