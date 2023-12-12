@@ -1,3 +1,4 @@
+import 'package:ev_charge/update_profile_screen/update_profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -65,7 +66,11 @@ class OtpScreen extends StatelessWidget {
                 width: size.width * 0.7,
                 height: 40,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const UpdateProfileScreen(),
+                    ));
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xffE6740C),
                     shape: RoundedRectangleBorder(
