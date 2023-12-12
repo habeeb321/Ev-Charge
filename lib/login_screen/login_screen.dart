@@ -1,3 +1,4 @@
+import 'package:ev_charge/otp_screen/otp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_pickers.dart';
@@ -104,9 +105,16 @@ class LoginScreen extends StatelessWidget {
                   width: double.infinity,
                   height: 40,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const OtpScreen(),
+                      ));
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xffE6740C),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
                     ),
                     child: const Text('Sent OTP'),
                   ),
