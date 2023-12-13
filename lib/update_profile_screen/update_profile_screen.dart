@@ -1,3 +1,4 @@
+import 'package:ev_charge/bottom_navigation/bottom_navigation.dart';
 import 'package:flutter/material.dart';
 
 class UpdateProfileScreen extends StatelessWidget {
@@ -118,7 +119,11 @@ class UpdateProfileScreen extends StatelessWidget {
                   width: double.infinity,
                   height: 50,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const BottomNavigation(),
+                      ));
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xffE6740C),
                       shape: RoundedRectangleBorder(
